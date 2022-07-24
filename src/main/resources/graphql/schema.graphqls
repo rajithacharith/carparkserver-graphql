@@ -1,0 +1,17 @@
+type Query {
+  getParkedCars: [Car]
+}
+
+type Mutation {
+  parkCar(id: ID, vehicleNumber: String, vehicleType: String): Car
+}
+
+type Car {
+  id: ID
+  vehicleNumber: String
+  vehicleType: String
+}
+
+type Subscription {
+  notifyCarPark: Car
+}
